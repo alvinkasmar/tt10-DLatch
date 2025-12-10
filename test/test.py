@@ -36,8 +36,7 @@ async def test_project(dut):
 
     # The following assersion is just an example of how to check the output values.
     # Change it to match the actual expected output of your module:
-    async def toggle_signal(dut, index, period_ns):
-    """Toggle ui_in[index] every period_ns nanoseconds."""
+    async def toggle_signal(dut, index, period_ns): """Toggle ui_in[index] every period_ns nanoseconds."""
     dut.ui_in[index].value = 0
     while True:
     await Timer(period_ns, units="ns")
