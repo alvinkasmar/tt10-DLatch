@@ -9,12 +9,19 @@ You can also include images in this folder and reference them in the markdown. E
 
 ## How it works
 
-Explain how your project works
+A D latch is a level-sensitive storage element that either stores a bit or passes it through depending on the enable signal. When EN = 1, the latch is transparent, meaning the output Q immediately follows the input D. When EN = 0, the latch holds its previous value, keeping Q unchanged regardless of changes at D. This makes the D latch useful for temporary data storage and for controlling when data is allowed to update in digital circuits.
 
 ## How to test
+Truth table of a DLatch
 
-Explain how to use your project
+| EN | D | Q(t) | Q(t+) (Qnext) |
+| -- | - | ---- | ------------- |
+| 0  | 0 | 0    | 0 *(hold)*    |
+| 0  | 0 | 1    | 1 *(hold)*    |
+| 0  | 1 | 0    | 0 *(hold)*    |
+| 0  | 1 | 1    | 1 *(hold)*    |
+| 1  | 0 | 0    | 0             |
+| 1  | 0 | 1    | 0             |
+| 1  | 1 | 0    | 1             |
+| 1  | 1 | 1    | 1             |
 
-## External hardware
-
-List external hardware used in your project (e.g. PMOD, LED display, etc), if any
